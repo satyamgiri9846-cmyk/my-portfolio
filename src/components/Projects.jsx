@@ -3,16 +3,6 @@ import "./Projects.css";
 function Projects() {
   const projects = [
     {
-      title: "Project One",
-      description: "[Short description of what this project does and what you used to build it.]",
-      link: "#",
-    },
-    {
-      title: "Project Two",
-      description: "[Short description of what this project does and what you used to build it.]",
-      link: "#",
-    },
-    {
       title: "This Portfolio",
       description: "The site you're looking at right now — built with React, deployed via Cloudflare Pages.",
       link: "#",
