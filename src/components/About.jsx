@@ -1,14 +1,21 @@
+import "./About.css";
+
 function About() {
+  const skills = ["HTML", "CSS", "JavaScript", "React", "Git", "Tailwind"];
+
   return (
-    <section style={{ padding: "2rem 1rem" }}>
-      <h2>About Me</h2>
+    <section className="about" id="about">
+      <span className="section-label">About Me</span>
+      <h2>A bit about who I am</h2>
       <p>
-        I'm an aspiring web developer currently interning at an IT company, where
-  I'm learning React and building real-world projects. I enjoy turning
-  designs into working, interactive websites and I'm especially interested
-  in frontend development. This portfolio is one of the projects I'm
-  building as part of my internship.
+        [Write 2–3 sentences about yourself here — your background, what
+        you're learning, and what kind of work excites you.]
       </p>
+      <div className="skills">
+        {skills.map((skill, i) => (
+          <span className="skill-tag" key={i}>{skill}</span>
+        ))}
+      </div>
     </section>
   );
 }
