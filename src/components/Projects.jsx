@@ -1,18 +1,37 @@
+import "./Projects.css";
+
 function Projects() {
   const projects = [
-    { title: "Project One", description: "Short description of what this project does." },
-    { title: "Project Two", description: "Short description of what this project does." },
+    {
+      title: "Project One",
+      description: "[Short description of what this project does and what you used to build it.]",
+      link: "#",
+    },
+    {
+      title: "Project Two",
+      description: "[Short description of what this project does and what you used to build it.]",
+      link: "#",
+    },
+    {
+      title: "This Portfolio",
+      description: "The site you're looking at right now — built with React, deployed via Cloudflare Pages.",
+      link: "#",
+    },
   ];
 
   return (
-    <section style={{ padding: "2rem 1rem" }}>
+    <section className="projects" id="projects">
+      <span className="section-label">My Work</span>
       <h2>Projects</h2>
-      {projects.map((p, i) => (
-        <div key={i} style={{ marginBottom: "1rem" }}>
-          <h3>{p.title}</h3>
-          <p>{p.description}</p>
-        </div>
-      ))}
+      <div className="project-grid">
+        {projects.map((p, i) => (
+          <div className="project-card" key={i}>
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
+            <a href={p.link} target="_blank" rel="noreferrer">View Project →</a>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
