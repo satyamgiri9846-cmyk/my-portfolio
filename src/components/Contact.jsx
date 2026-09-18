@@ -13,7 +13,7 @@ function Contact() {
         <div className="contact-links">
           <a href="mailto:satyamgiri9846@gmail.com">Email</a>
           <a href="https://github.com/satyamgiri9846" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/satyamgiri" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://linkedin.com/in/satyam-giri-899856207" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
       <p className="footer-note">© {new Date().getFullYear()} Satyam Giri. All rights reserved.</p>

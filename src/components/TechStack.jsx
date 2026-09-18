@@ -7,7 +7,7 @@ function TechStack() {
     { name: "JavaScript", icon: "⚡" },
     { name: "React", icon: "⚛️" },
     { name: "Git & GitHub", icon: "🔧" },
-    { name: "[Add more]", icon: "➕" },
+    
   ];
 
   return (
