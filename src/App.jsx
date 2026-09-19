@@ -36,20 +36,20 @@ const projects = [
 const contactData = {
   message: "Open to internship/job opportunities and collaborations. Please feel free to reach out.",
   links: [
-    { label: "Email", href: "mailto:youremail@example.com" },
-    { label: "GitHub", href: "https://github.com/yourusername" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/yourusername" },
-    { label: "Discord", href: "#" },
+    { label: "Email", href: "mailto:satyamgiri9846@gmail.com" },
+    { label: "GitHub", href: "https://github.com/satyamgiri9846-cmyk" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/satyam-giri-899856207" },
+    { label: "Discord", href: "https://discord.com/users/739362086651559956" },
   ],
   year: new Date().getFullYear(),
-  name: "[Your Name]",
+  name: "Satyam Giri",
 };
 
 function App() {
   return (
     <div>
       <Navbar siteName="Portfolio" links={navLinks} />
-      <Hero
+            <Hero
         greeting="Welcome to my portfolio"
         name="Satyam Giri"
         tagline="Frontend Developer Intern building clean, modern web experiences with React and JavaScript."
@@ -59,12 +59,12 @@ function App() {
       <About bio={aboutData.bio} skills={aboutData.skills} />
       <TechStack techs={techs} />
       <Projects projects={projects} />
-      <Contact 
-       message={contactData.message} 
-       links={contactData.links} 
-       year={contactData.year} 
-       name={contactData.name} 
-       />
+      <Contact
+        message={contactData.message}
+        links={contactData.links}
+        year={contactData.year}
+        name={contactData.name}
+      />
     </div>
   );
 }
