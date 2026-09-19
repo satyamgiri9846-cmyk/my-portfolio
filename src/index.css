@@ -15,6 +15,13 @@
   --text-muted: #b2b2c2;
 }
 
+[data-theme="light"] {
+  --bg-dark: #f5f5fa;
+  --bg-light: #ffffff;
+  --text-light: #1a1a2e;
+  --text-muted: #555566;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-dark);
