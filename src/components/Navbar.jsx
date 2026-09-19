@@ -1,14 +1,15 @@
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ siteName, links }) {
   return (
     <nav className="navbar">
-      <h2>Portfolio</h2>
+      <h2>{siteName}</h2>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#techstack">Tech Stack</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        {links.map((link, i) => (
+          <li key={i}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
