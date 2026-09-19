@@ -12,18 +12,23 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+const aboutData = {
+  bio: "I'm an aspiring web developer currently interning at an IT company, where I'm learning React and building real-world projects. I enjoy turning designs into working, interactive websites and I'm especially interested in frontend development.",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Git", "Tailwind"],
+};
+
 function App() {
   return (
     <div>
       <Navbar siteName="Portfolio" links={navLinks} />
       <Hero
         greeting="Welcome to my portfolio"
-        name="Satyam Giri"
+        name="[Your Name]"
         tagline="Frontend Developer Intern building clean, modern web experiences with React and JavaScript."
         primaryBtn={{ label: "View Projects", href: "#projects" }}
         secondaryBtn={{ label: "Contact Me", href: "#contact" }}
       />
-      <About />
+      <About bio={aboutData.bio} skills={aboutData.skills} />
       <TechStack />
       <Projects />
       <Contact />
