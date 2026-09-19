@@ -1,15 +1,6 @@
 import "./TechStack.css";
 
-function TechStack() {
-  const techs = [
-    { name: "HTML", icon: "🌐" },
-    { name: "CSS", icon: "🎨" },
-    { name: "JavaScript", icon: "⚡" },
-    { name: "React", icon: "⚛️" },
-    { name: "Git & GitHub", icon: "🔧" },
-    { name: "Discord", icon: "💬" }
-  ];
-
+function TechStack({ techs }) {
   return (
     <section className="techstack" id="techstack">
       <span className="section-label">What I Use</span>

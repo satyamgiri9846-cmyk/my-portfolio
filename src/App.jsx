@@ -17,6 +17,14 @@ const aboutData = {
   skills: ["HTML", "CSS", "JavaScript", "React", "Git", "Tailwind"],
 };
 
+const techs = [
+  { name: "HTML", icon: "🌐" },
+  { name: "CSS", icon: "🎨" },
+  { name: "JavaScript", icon: "⚡" },
+  { name: "React", icon: "⚛️" },
+  { name: "Git & GitHub", icon: "🔧" },
+];
+
 function App() {
   return (
     <div>
@@ -29,7 +37,7 @@ function App() {
         secondaryBtn={{ label: "Contact Me", href: "#contact" }}
       />
       <About bio={aboutData.bio} skills={aboutData.skills} />
-      <TechStack />
+      <TechStack techs={techs} />
       <Projects />
       <Contact />
     </div>
