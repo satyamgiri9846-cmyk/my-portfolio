@@ -23,7 +23,7 @@ function App() {
       <Navbar siteName="Portfolio" links={navLinks} />
       <Hero
         greeting="Welcome to my portfolio"
-        name="[Your Name]"
+        name="Satyam Giri"
         tagline="Frontend Developer Intern building clean, modern web experiences with React and JavaScript."
         primaryBtn={{ label: "View Projects", href: "#projects" }}
         secondaryBtn={{ label: "Contact Me", href: "#contact" }}
