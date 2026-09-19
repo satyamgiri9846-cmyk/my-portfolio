@@ -48,8 +48,13 @@ const contactData = {
 function App() {
   return (
     <div>
+      <div className="bg-orbs">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+      </div>
       <Navbar siteName="Portfolio" links={navLinks} />
-            <Hero
+      <Hero
         greeting="Welcome to my portfolio"
         name="Satyam Giri"
         tagline="Frontend Developer Intern building clean, modern web experiences with React and JavaScript."
