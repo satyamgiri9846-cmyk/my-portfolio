@@ -25,6 +25,26 @@ const techs = [
   { name: "Git & GitHub", icon: "🔧" },
 ];
 
+const projects = [
+  {
+    title: "This Portfolio",
+    description: "The site you're looking at right now — built with React, deployed via Cloudflare Pages.",
+    link: "#",
+  },
+];
+
+const contactData = {
+  message: "Open to internship/job opportunities and collaborations. Please feel free to reach out.",
+  links: [
+    { label: "Email", href: "mailto:youremail@example.com" },
+    { label: "GitHub", href: "https://github.com/yourusername" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/yourusername" },
+    { label: "Discord", href: "#" },
+  ],
+  year: new Date().getFullYear(),
+  name: "[Your Name]",
+};
+
 function App() {
   return (
     <div>
@@ -38,8 +58,13 @@ function App() {
       />
       <About bio={aboutData.bio} skills={aboutData.skills} />
       <TechStack techs={techs} />
-      <Projects />
-      <Contact />
+      <Projects projects={projects} />
+      <Contact 
+       message={contactData.message} 
+       links={contactData.links} 
+       year={contactData.year} 
+       name={contactData.name} 
+       />
     </div>
   );
 }

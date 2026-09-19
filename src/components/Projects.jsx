@@ -1,14 +1,6 @@
 import "./Projects.css";
 
-function Projects() {
-  const projects = [
-    {
-      title: "This Portfolio",
-      description: "The site you're looking at right now — built with React, deployed via Cloudflare Pages.",
-      link: "#",
-    },
-  ];
-
+function Projects({ projects }) {
   return (
     <section className="projects" id="projects">
       <span className="section-label">My Work</span>
