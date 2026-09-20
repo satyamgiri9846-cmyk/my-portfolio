@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -32,11 +32,11 @@ body {
 }
 
 section {
-  padding: 5rem 8%;
+  padding: 6rem 8%;
 }
 
 h1, h2, h3 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a {
@@ -46,65 +46,5 @@ a {
 
 ::selection {
   background: var(--accent);
-  color: white;
-}
-
-.bg-orbs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.55;
-}
-
-.orb-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--accent);
-  top: -100px;
-  left: -100px;
-  animation: floatOrb1 10s ease-in-out infinite;
-}
-
-.orb-2 {
-  width: 350px;
-  height: 350px;
-  background: var(--accent-light);
-  bottom: -80px;
-  right: -80px;
-  animation: floatOrb2 12s ease-in-out infinite;
-}
-
-.orb-3 {
-  width: 300px;
-  height: 300px;
-  background: var(--accent);
-  top: 40%;
-  left: 60%;
-  animation: floatOrb3 14s ease-in-out infinite;
-}
-
-@keyframes floatOrb1 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(100px, 150px); }
-}
-
-@keyframes floatOrb2 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-120px, -100px); }
-}
-
-@keyframes floatOrb3 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-80px, 120px); }
+  color: #111111;
 }

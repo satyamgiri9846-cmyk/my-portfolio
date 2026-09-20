@@ -1,10 +1,13 @@
 import "./Hero.css";
 
-function Hero({ greeting, name, tagline, primaryBtn, secondaryBtn }) {
+function Hero({ badge, headline1, headline2, tagline, primaryBtn, secondaryBtn }) {
   return (
     <section className="hero">
-      <span>{greeting}</span>
-      <h1>Hi, I'm <span>{name}</span></h1>
+      <span className="hero-badge">{badge}</span>
+      <h1>
+        {headline1}<br />
+        <span>{headline2}</span>
+      </h1>
       <p>{tagline}</p>
       <div className="hero-buttons">
         <a href={primaryBtn.href} className="btn btn-primary">{primaryBtn.label}</a>

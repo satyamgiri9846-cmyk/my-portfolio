@@ -4,7 +4,6 @@ import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import MountainBackground from "./components/MountainBackground"; 
 
 
 const navLinks = [
@@ -50,15 +49,15 @@ const contactData = {
 function App() {
   return (
     <div>
-      <MountainBackground />
       <Navbar siteName="Portfolio" links={navLinks} />
-      <Hero
-        greeting="Welcome to my portfolio"
-        name="Satyam Giri"
-        tagline="Frontend Developer Intern building clean, modern web experiences with React and JavaScript."
-        primaryBtn={{ label: "View Projects", href: "#projects" }}
-        secondaryBtn={{ label: "Contact Me", href: "#contact" }}
-      />
+     <Hero
+  badge="Frontend Developer"
+  headline1="Building clean web"
+  headline2="experiences that work."
+  tagline="I'm Satyam Giri, an aspiring frontend developer creating modern, functional websites with React and JavaScript."
+  primaryBtn={{ label: "View Projects", href: "#projects" }}
+  secondaryBtn={{ label: "Contact Me", href: "#contact" }}
+/>
       <About bio={aboutData.bio} skills={aboutData.skills} />
       <TechStack techs={techs} />
       <Projects projects={projects} />
