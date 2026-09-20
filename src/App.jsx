@@ -4,6 +4,8 @@ import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import MountainBackground from "./components/MountainBackground"; 
+
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -48,11 +50,7 @@ const contactData = {
 function App() {
   return (
     <div>
-      <div className="bg-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-      </div>
+      <MountainBackground />
       <Navbar siteName="Portfolio" links={navLinks} />
       <Hero
         greeting="Welcome to my portfolio"

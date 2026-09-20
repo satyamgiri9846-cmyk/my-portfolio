@@ -12,7 +12,7 @@
 }
 
 .navbar h2 {
-  color: var(--accent-light);
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
@@ -25,12 +25,12 @@
 .navbar ul li a {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   transition: color 0.25s ease;
 }
 
 .navbar ul li a:hover {
-  color: var(--accent-light);
+  color: var(--accent);
 }
 
 .theme-toggle {
