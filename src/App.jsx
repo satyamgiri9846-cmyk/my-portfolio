@@ -29,6 +29,13 @@ const aboutData = {
   skills: ["HTML", "CSS", "JavaScript", "React", "Git", "Tailwind"],
 };
 
+const statsData = [
+  { value: 1, suffix: "", label: "Week Interning" },
+  { value: 5, suffix: "+", label: "Technologies Learning" },
+  { value: 1, suffix: "", label: "Live Project" },
+  { value: 100, suffix: "%", label: "Growth Mindset" },
+];
+
 const techs = [
   { name: "HTML", icon: "🌐" },
   { name: "CSS", icon: "🎨" },
@@ -66,7 +73,7 @@ function App() {
         <Navbar siteName="Portfolio" links={navLinks} />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home heroData={heroData} />} />
+           <Route path="/" element={<Home heroData={heroData} statsData={statsData} />} />
             <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
             <Route path="/techstack" element={<TechStackPage techs={techs} />} />
             <Route path="/projects" element={<ProjectsPage projects={projects} />} />
