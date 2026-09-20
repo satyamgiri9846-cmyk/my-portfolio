@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 8%;
-  background: rgba(255, 255, 255, 0.85);
+  background: color-mix(in srgb, var(--bg-dark) 85%, transparent);
   backdrop-filter: blur(10px);
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
@@ -46,4 +46,23 @@
 
 .navbar-cta:hover {
   transform: translateY(-2px);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
 }
