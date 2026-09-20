@@ -4,7 +4,7 @@ import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-
+import pageBg from "./assets/page-bg.jpg";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -48,7 +48,8 @@ const contactData = {
 
 function App() {
   return (
-    <div>
+        <div className="page-outer" style={{ backgroundImage: `url(${pageBg})` }}>
+      <div className="page-frame">
       <Navbar siteName="Portfolio" links={navLinks} />
      <Hero
   badge="Frontend Developer"
@@ -67,6 +68,7 @@ function App() {
         year={contactData.year}
         name={contactData.name}
       />
+         </div>
     </div>
   );
 }
