@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import TechStackPage from "./pages/TechStackPage";
 import pageBg from "./assets/page-bg.jpg";
 
 const navLinks = [
   { label: "About", to: "/about" },
+  { label: "Tech Stack", to: "/techstack" },
   { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
 ];
@@ -60,11 +62,12 @@ function App() {
       <div className="page-frame">
         <Navbar siteName="Portfolio" links={navLinks} />
         <Routes>
-          <Route path="/" element={<Home heroData={heroData} techs={techs} />} />
-          <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
-          <Route path="/projects" element={<ProjectsPage projects={projects} />} />
-          <Route path="/contact" element={<ContactPage contactData={contactData} />} />
-        </Routes>
+  <Route path="/" element={<Home heroData={heroData} />} />
+  <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
+  <Route path="/techstack" element={<TechStackPage techs={techs} />} />
+  <Route path="/projects" element={<ProjectsPage projects={projects} />} />
+  <Route path="/contact" element={<ContactPage contactData={contactData} />} />
+</Routes>
       </div>
     </div>
   );
