@@ -60,6 +60,16 @@ a {
   justify-content: center;
 }
 
+@media (max-width: 640px) {
+  .page-outer {
+    padding: 0.5rem;
+  }
+
+  .page-frame {
+    border-radius: 16px;
+  }
+}
+
 .page-frame {
   background: #ffffff;
   width: 100%;
