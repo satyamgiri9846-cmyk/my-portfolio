@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
@@ -57,17 +58,21 @@ const contactData = {
 };
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="page-outer" style={{ backgroundImage: `url(${pageBg})` }}>
       <div className="page-frame">
         <Navbar siteName="Portfolio" links={navLinks} />
-        <Routes>
-  <Route path="/" element={<Home heroData={heroData} />} />
-  <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
-  <Route path="/techstack" element={<TechStackPage techs={techs} />} />
-  <Route path="/projects" element={<ProjectsPage projects={projects} />} />
-  <Route path="/contact" element={<ContactPage contactData={contactData} />} />
-</Routes>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home heroData={heroData} />} />
+            <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
+            <Route path="/techstack" element={<TechStackPage techs={techs} />} />
+            <Route path="/projects" element={<ProjectsPage projects={projects} />} />
+            <Route path="/contact" element={<ContactPage contactData={contactData} />} />
+          </Routes>
+        </AnimatePresence>
       </div>
     </div>
   );

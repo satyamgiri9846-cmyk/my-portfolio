@@ -1,16 +1,21 @@
 import "./TechStack.css";
+import Reveal from "./Reveal";
 
 function TechStack({ techs }) {
   return (
     <section className="techstack" id="techstack">
-      <span className="section-label">What I Use</span>
-      <h2>Tech Stack</h2>
+      <Reveal>
+        <span className="section-label">What I Use</span>
+        <h2>Tech Stack</h2>
+      </Reveal>
       <div className="tech-grid">
         {techs.map((tech, i) => (
-          <div className="tech-card" key={i}>
-            <span className="tech-icon">{tech.icon}</span>
-            <span>{tech.name}</span>
-          </div>
+          <Reveal key={i} delay={i * 100}>
+            <div className="tech-card">
+              <span className="tech-icon">{tech.icon}</span>
+              <span>{tech.name}</span>
+            </div>
+          </Reveal>
         ))}
       </div>
     </section>

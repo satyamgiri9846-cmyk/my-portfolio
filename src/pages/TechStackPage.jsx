@@ -1,7 +1,12 @@
 import TechStack from "../components/TechStack";
+import PageWrapper from "../components/PageWrapper";
 
 function TechStackPage({ techs }) {
-  return <TechStack techs={techs} />;
+  return (
+    <PageWrapper>
+      <TechStack techs={techs} />
+    </PageWrapper>
+  );
 }
 
 export default TechStackPage;
