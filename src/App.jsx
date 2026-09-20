@@ -1,17 +1,25 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 import pageBg from "./assets/page-bg.jpg";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Tech Stack", href: "#techstack" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", to: "/about" },
+  { label: "Projects", to: "/projects" },
+  { label: "Contact", to: "/contact" },
 ];
+
+const heroData = {
+  badge: "Frontend Developer",
+  headline1: "Building clean web",
+  headline2: "experiences that work.",
+  tagline: "I'm Satyam Giri, an aspiring frontend developer creating modern, functional websites with React and JavaScript.",
+  primaryBtn: { label: "View Projects", href: "/projects" },
+  secondaryBtn: { label: "Contact Me", href: "/contact" },
+};
 
 const aboutData = {
   bio: "I'm an aspiring web developer currently interning at an IT company, where I'm learning React and building real-world projects. I enjoy turning designs into working, interactive websites and I'm especially interested in frontend development.",
@@ -48,27 +56,16 @@ const contactData = {
 
 function App() {
   return (
-        <div className="page-outer" style={{ backgroundImage: `url(${pageBg})` }}>
+    <div className="page-outer" style={{ backgroundImage: `url(${pageBg})` }}>
       <div className="page-frame">
-      <Navbar siteName="Portfolio" links={navLinks} />
-     <Hero
-  badge="Frontend Developer"
-  headline1="Building clean web"
-  headline2="experiences that work."
-  tagline="I'm Satyam Giri, an aspiring frontend developer creating modern, functional websites with React and JavaScript."
-  primaryBtn={{ label: "View Projects", href: "#projects" }}
-  secondaryBtn={{ label: "Contact Me", href: "#contact" }}
-/>
-      <About bio={aboutData.bio} skills={aboutData.skills} />
-      <TechStack techs={techs} />
-      <Projects projects={projects} />
-      <Contact
-        message={contactData.message}
-        links={contactData.links}
-        year={contactData.year}
-        name={contactData.name}
-      />
-         </div>
+        <Navbar siteName="Portfolio" links={navLinks} />
+        <Routes>
+          <Route path="/" element={<Home heroData={heroData} techs={techs} />} />
+          <Route path="/about" element={<AboutPage aboutData={aboutData} />} />
+          <Route path="/projects" element={<ProjectsPage projects={projects} />} />
+          <Route path="/contact" element={<ContactPage contactData={contactData} />} />
+        </Routes>
+      </div>
     </div>
   );
 }

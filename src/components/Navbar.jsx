@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar({ siteName, links }) {
   return (
     <nav className="navbar">
-      <h2>{siteName}</h2>
+      <Link to="/"><h2>{siteName}</h2></Link>
       <ul>
         {links.map((link, i) => (
           <li key={i}>
-            <a href={link.href}>{link.label}</a>
+            <Link to={link.to}>{link.label}</Link>
           </li>
         ))}
       </ul>
-      <a href="#contact" className="navbar-cta">Get in touch</a>
+      <Link to="/contact" className="navbar-cta">Get in touch</Link>
     </nav>
   );
 }
