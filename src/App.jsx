@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import TechStackPage from "./pages/TechStackPage";
 import pageBg from "./assets/page-bg.jpg";
+import Loader from "./components/Loader";
 
 const navLinks = [
   { label: "About", to: "/about" },
@@ -69,7 +70,8 @@ function App() {
 
   return (
     <div className="page-outer" style={{ backgroundImage: `url(${pageBg})` }}>
-      <div className="page-frame">
+     <Loader />
+     <div className="page-frame">
         <Navbar siteName="Portfolio" links={navLinks} />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
